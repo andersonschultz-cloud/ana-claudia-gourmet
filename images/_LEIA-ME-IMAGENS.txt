@@ -1,0 +1,24 @@
+PASTA DE IMAGENS — Ana Claudia Gourmet
+=======================================
+
+Coloque aqui TODAS as imagens do site. Os nomes precisam ser EXATAMENTE estes
+(o código procura por eles automaticamente):
+
+  logo.png                -> logotipo da empresa (de preferência fundo transparente)
+  chef-ana-claudia.jpg    -> foto da Chef Ana Cláudia
+  foto1.jpg  ... foto15.jpg  -> 15 fotos da galeria/portfólio
+
+PARA TROCAR UMA IMAGEM:
+  Basta substituir o arquivo mantendo o mesmo nome. Não precisa mexer no código.
+
+PARA TER MAIS FOTOS (20, 30...):
+  1) Adicione foto16.jpg, foto17.jpg, ... aqui.
+  2) No arquivo script.js, mude a linha: var TOTAL_FOTOS = 15;
+
+DICAS DE QUALIDADE:
+  - Galeria: imagens "em pé" (retrato), proporção ~4:5, ex.: 800x1000px.
+  - Chef: também em retrato (~4:5).
+  - Use JPG otimizado (até ~300 KB) para o site carregar rápido.
+
+As imagens que vieram na pasta são apenas PROVISÓRIAS (placeholders) e podem
+ser substituídas pelas fotos reais.

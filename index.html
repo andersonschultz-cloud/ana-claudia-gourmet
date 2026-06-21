@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ============================================================= -->
+  <!--  SEO  -  ajuste os textos abaixo conforme necessário          -->
+  <!-- ============================================================= -->
+  <title>Ana Claudia Gourmet | Qualidade e Requinte à Sua Mesa</title>
+  <meta name="description" content="Confeitaria artesanal premium em Porto Alegre/RS. Bolos personalizados, doces gourmet, salgados e buffet para casamentos, formaturas, aniversários e eventos corporativos. Solicite seu orçamento pelo WhatsApp." />
+  <meta name="keywords" content="confeitaria, bolos personalizados, doces gourmet, salgados para festas, coffee break, casamentos, formaturas, eventos corporativos, Porto Alegre" />
+  <meta name="author" content="Ana Claudia Gourmet" />
+  <meta name="theme-color" content="#2a1a14" />
+  <link rel="canonical" href="https://seu-usuario.github.io/ana-claudia-gourmet/" />
+
+  <!-- Open Graph (compartilhamento em redes sociais) -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Ana Claudia Gourmet | Qualidade e Requinte à Sua Mesa" />
+  <meta property="og:description" content="Confeitaria artesanal premium. Bolos, doces gourmet e buffet para eventos especiais." />
+  <meta property="og:image" content="images/logo.png" />
+  <meta property="og:locale" content="pt_BR" />
+
+  <!-- Ícone do site (troque por images/logo.png ou um favicon.ico) -->
+  <link rel="icon" type="image/png" href="images/logo.png" />
+
+  <!-- ============================================================= -->
+  <!--  FONTES                                                       -->
+  <!-- ============================================================= -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Dados estruturados para o Google (negócio local) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Bakery",
+    "name": "Ana Claudia Gourmet",
+    "image": "images/logo.png",
+    "description": "Confeitaria artesanal premium: bolos personalizados, doces gourmet, salgados e buffet para eventos.",
+    "telephone": "+5551999550311",
+    "email": "aclaudiamsf@gmail.com",
+    "areaServed": "Porto Alegre e região",
+    "priceRange": "$$$"
+  }
+  </script>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- ============================================================= -->
+  <!--  FUNDO "BOLO" FIXO                                            -->
+  <!--  Camadas que ficam atrás de todo o site e dão a sensação      -->
+  <!--  de estar dentro de uma confeitaria. A cobertura escorre      -->
+  <!--  conforme o scroll (controlado em script.js).                 -->
+  <!-- ============================================================= -->
+  <div class="cake-bg" aria-hidden="true">
+    <div class="cake-bg__sponge"></div>
+    <div class="cake-bg__grain"></div>
+  </div>
+
+  <!-- Partículas douradas flutuantes (atmosfera) -->
+  <div class="sparkles" aria-hidden="true"></div>
+
+  <!-- ============================================================= -->
+  <!--  CABEÇALHO / NAVEGAÇÃO                                         -->
+  <!-- ============================================================= -->
+  <header class="nav" id="topo">
+    <a class="nav__brand" href="#topo" aria-label="Ana Claudia Gourmet - início">
+      <!-- LOGO: substitua images/logo.png pelo logotipo oficial -->
+      <img src="images/logo.png" alt="Logotipo Ana Claudia Gourmet" class="nav__logo" width="46" height="46"
+           onerror="this.classList.add('img-fallback');this.alt='AC';" />
+      <span class="nav__name">Ana Claudia <em>Gourmet</em></span>
+    </a>
+
+    <button class="nav__toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="nav__menu" id="menu">
+      <a href="#sobre">A Chef</a>
+      <a href="#galeria">Galeria</a>
+      <a href="#servicos">Serviços</a>
+      <a href="#diferenciais">Diferenciais</a>
+      <a href="#depoimentos">Depoimentos</a>
+      <a href="#instagram">Instagram</a>
+      <a href="#contato" class="nav__cta">Orçamento</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ========================================================= -->
+    <!--  1. HERO                                                  -->
+    <!-- ========================================================= -->
+    <section class="hero" id="hero">
+      <!-- Conteúdo do hero -->
+      <div class="hero__inner">
+        <img src="images/logo.png" alt="Ana Claudia Gourmet" class="hero__logo reveal" width="160" height="160"
+             onerror="this.classList.add('img-fallback');this.alt='AC';" />
+
+        <span class="hero__eyebrow reveal">Confeitaria Artesanal Premium</span>
+        <h1 class="hero__title reveal">Ana Claudia <span>Gourmet</span></h1>
+        <p class="hero__slogan reveal">"Qualidade e Requinte à Sua Mesa"</p>
+
+        <div class="hero__actions reveal">
+          <a class="btn btn--whats" href="https://wa.me/5551999550311?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento."
+             target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" class="ico" aria-hidden="true"><path fill="currentColor" d="M12.04 2c-5.46 0-9.9 4.44-9.9 9.9 0 1.75.46 3.45 1.32 4.95L2 22l5.3-1.38a9.86 9.86 0 0 0 4.73 1.2h.01c5.46 0 9.9-4.44 9.9-9.9 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2m0 1.8c2.16 0 4.2.84 5.73 2.37a8.05 8.05 0 0 1 2.37 5.73c0 4.48-3.65 8.1-8.1 8.1-1.5 0-2.96-.4-4.24-1.16l-.3-.18-3.15.82.84-3.07-.2-.32a8.06 8.06 0 0 1-1.24-4.29c0-4.48 3.65-8.1 8.1-8.1m4.55 11.45c-.25-.13-1.47-.72-1.7-.8-.23-.09-.4-.13-.56.12-.17.25-.64.8-.79.97-.14.16-.29.18-.54.06-.25-.13-1.05-.39-2-1.23-.74-.66-1.24-1.47-1.39-1.72-.14-.25-.01-.38.11-.51.11-.11.25-.29.37-.43.13-.15.17-.25.25-.42.08-.16.04-.31-.02-.43-.06-.13-.56-1.35-.77-1.84-.2-.48-.41-.42-.56-.42l-.48-.01c-.16 0-.43.06-.66.31-.23.25-.86.85-.86 2.07 0 1.22.89 2.4 1.01 2.56.13.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.47-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.14-1.18-.06-.1-.22-.16-.47-.28"/></svg>
+            Solicitar orçamento
+          </a>
+          <a class="btn btn--ghost" href="#galeria">Ver catálogo</a>
+        </div>
+      </div>
+
+      <!-- COBERTURA QUE ESCORRE  ----------------------------------- -->
+      <!-- A altura dos pingos é alterada pelo scroll (script.js).    -->
+      <div class="frosting" aria-hidden="true">
+        <svg class="frosting__svg" viewBox="0 0 1440 220" preserveAspectRatio="none">
+          <path class="frosting__path" d="M0,70 C160,10 320,10 480,60 C640,110 800,110 960,60 C1120,10 1280,10 1440,70 L1440,220 L0,220 Z"></path>
+        </svg>
+        <!-- Pingos individuais (escorrem no scroll via --drip) -->
+        <span class="drip" style="left:12%"></span>
+        <span class="drip" style="left:30%"></span>
+        <span class="drip" style="left:50%"></span>
+        <span class="drip" style="left:68%"></span>
+        <span class="drip" style="left:86%"></span>
+      </div>
+    </section>
+
+    <!-- ========================================================= -->
+    <!--  2. SOBRE A CHEF                                          -->
+    <!-- ========================================================= -->
+    <section class="sobre" id="sobre">
+      <div class="container sobre__grid">
+
+        <!-- FOTO DA CHEF
+             Troque o arquivo images/chef-ana-claudia.jpg para
+             atualizar a foto. Não precisa mexer no código. -->
+        <figure class="chef" tabindex="0" aria-label="Foto da Chef Ana Cláudia">
+          <img src="images/chef-ana-claudia.jpg" alt="Chef Ana Cláudia"
+               class="chef__photo" width="520" height="640" loading="lazy"
+               onerror="this.classList.add('img-fallback');this.dataset.label='Foto da Chef Ana Cláudia';" />
+
+          <!-- Enfeites que aparecem ao passar o mouse / tocar -->
+          <span class="chef__deco chef__deco--spoon" aria-hidden="true">
+            <svg viewBox="0 0 64 200"><path fill="currentColor" d="M32 4c-9 0-16 9-16 22 0 11 6 19 14 21v140a2 2 0 0 0 4 0V47c8-2 14-10 14-21C48 13 41 4 32 4z"/></svg>
+          </span>
+          <span class="chef__deco chef__deco--sprinkle s1" aria-hidden="true"></span>
+          <span class="chef__deco chef__deco--sprinkle s2" aria-hidden="true"></span>
+          <span class="chef__deco chef__deco--sprinkle s3" aria-hidden="true"></span>
+          <span class="chef__deco chef__deco--sprinkle s4" aria-hidden="true"></span>
+          <span class="chef__deco chef__deco--sprinkle s5" aria-hidden="true"></span>
+        </figure>
+
+        <div class="sobre__texto reveal">
+          <span class="eyebrow">A Chef</span>
+          <h2 class="section-title">Paixão que se traduz em sabor</h2>
+          <p>Há mais de uma década dedicada à arte da confeitaria, a Chef Ana Cláudia transforma ingredientes selecionados em criações que encantam o olhar antes mesmo do paladar.</p>
+          <p>Cada bolo, cada doce e cada salgado é preparado de forma totalmente artesanal, com a dedicação de quem entende que um evento especial merece sabores memoráveis e uma apresentação impecável.</p>
+          <p>É essa busca constante por requinte e qualidade que torna a <strong>Ana Claudia Gourmet</strong> a escolha de quem deseja receber bem e surpreender.</p>
+          <a class="btn btn--solid" href="#contato">Falar com a Chef</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================= -->
+    <!--  3. GALERIA INTERATIVA (carrossel infinito)               -->
+    <!-- ========================================================= -->
+    <section class="galeria" id="galeria">
+      <div class="container galeria__head reveal">
+        <span class="eyebrow">Portfólio</span>
+        <h2 class="section-title">Nossas Criações</h2>
+        <p class="section-sub">Arraste para o lado no celular ou passe o mouse para ampliar.</p>
+      </div>
+
+      <!-- A faixa de imagens é gerada automaticamente em script.js.
+           Para trocar uma foto: substitua o arquivo em /images
+           (foto1.jpg ... foto15.jpg) mantendo o mesmo nome.
+           Para ter MAIS fotos (ex.: 20, 30): basta alterar o número
+           TOTAL_FOTOS no início do script.js. -->
+      <div class="carousel" id="carousel" aria-label="Galeria de fotos">
+        <div class="carousel__track" id="carouselTrack"><!-- preenchido via JS --></div>
+      </div>
+    </section>
+
+    <!-- ========================================================= -->
+    <!--  4. SERVIÇOS                                              -->
+    <!-- ========================================================= -->
+    <section class="servicos" id="servicos">
+      <div class="container">
+        <div class="galeria__head reveal">
+          <span class="eyebrow">O que fazemos</span>
+          <h2 class="section-title">Serviços</h2>
+          <p class="section-sub">Do bolo dos sonhos ao buffet completo do seu evento.</p>
+        </div>
+
+        <div class="cards">
+          <!-- Cada card: ícone + título + descrição. Reveal animado via JS. -->
+          <article class="card reveal">
+            <span class="card__ico">
+              <svg viewBox="0 0 48 48" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" d="M24 6v6M16 12v6M32 12v6M10 24c0-3 2-5 5-5h18c3 0 5 2 5 5v4H10zM10 28h28v8a4 4 0 0 1-4 4H14a4 4 0 0 1-4-4zM10 32c2 2 4 2 6 0s4-2 6 0 4 2 6 0 4-2 6 0 4 2 6 0"/></svg>
+            </span>
+            <h3>Bolos Personalizados</h3>
+            <p>Designs exclusivos em pasta americana e cremes finos para cada ocasião.</p>
+          </article>
+
+          <article class="card reveal">
+            <span class="card__ico">
+              <svg viewBox="0 0 48 48" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" d="M24 8c6 0 11 4 11 11 0 7-5 11-11 17-6-6-11-10-11-17C13 12 18 8 24 8z"/><circle cx="24" cy="19" r="4" fill="currentColor"/></svg>
+            </span>
+            <h3>Doces Gourmet</h3>
+            <p>Brigadeiros finos, verrines e docinhos de festa com acabamento sofisticado.</p>
+          </article>
+
+          <article class="card reveal">
+            <span class="card__ico">
+              <svg viewBox="0 0 48 48" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" d="M8 30c0-9 7-16 16-16s16 7 16 16zM6 30h36M14 22l-2-4M24 20v-5M34 22l2-4"/></svg>
+            </span>
+            <h3>Salgados para Festas</h3>
+            <p>Variedade artesanal, fritos na hora e assados, sempre fresquinhos.</p>
+          </article>
+
+          <article class="card reveal">
+            <span class="card__ico">
+              <svg viewBox="0 0 48 48" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" d="M10 20h22v9a8 8 0 0 1-8 8h-6a8 8 0 0 1-8-8zM32 23h4a4 4 0 0 1 0 8h-4M14 14c0-2 2-2 2-4M21 14c0-2 2-2 2-4M28 14c0-2 2-2 2-4"/></svg>
+            </span>
+            <h3>Coffee Break Empresarial</h3>
+            <p>Pausas elegantes que valorizam reuniões, treinamentos e congressos.</p>
+          </article>
+
+          <article class="card reveal">
+            <span class="card__ico">
+              <svg viewBox="0 0 48 48" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" d="M24 10l3 6 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1zM12 38h24"/></svg>
+            </span>
+            <h3>Casamentos</h3>
+            <p>Mesas de doces e bolos de casamento à altura do dia mais importante.</p>
+          </article>
+
+          <article class="card reveal">
+            <span class="card__ico">
+              <svg viewBox="0 0 48 48" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" d="M14 22l10-8 10 8M12 22v14h24V22M8 22l16-12 16 12M20 36v-8h8v8"/></svg>
+            </span>
+            <h3>Formaturas</h3>
+            <p>Celebre a conquista com um buffet completo e uma apresentação de primeira.</p>
+          </article>
+
+          <article class="card reveal">
+            <span class="card__ico">
+              <svg viewBox="0 0 48 48" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" d="M24 12v24M16 16l8 4 8-4M12 36h24M18 36v-8M30 36v-8M24 8a2 2 0 1 1 0 4 2 2 0 0 1 0-4z"/></svg>
+            </span>
+            <h3>Aniversários</h3>
+            <p>Festas inesquecíveis com bolos temáticos e doces que encantam convidados.</p>
+          </article>
+
+          <article class="card reveal">
+            <span class="card__ico">
+              <svg viewBox="0 0 48 48" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" d="M10 38V14l8-4 8 4 8-4v24M10 38h28M18 10v28M26 14v24M14 18h0M14 24h0M30 20h0M30 26h0"/></svg>
+            </span>
+            <h3>Eventos Corporativos</h3>
+            <p>Soluções completas de confeitaria e buffet para empresas e marcas.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================= -->
+    <!--  5. DIFERENCIAIS                                          -->
+    <!-- ========================================================= -->
+    <section class="diferenciais" id="diferenciais">
+      <div class="container">
+        <div class="galeria__head reveal">
+          <span class="eyebrow">Por que nos escolher</span>
+          <h2 class="section-title">Nossos Diferenciais</h2>
+        </div>
+
+        <div class="dif-grid">
+          <div class="dif reveal"><span class="dif__num">01</span><h3>Ingredientes Selecionados</h3><p>Trabalhamos apenas com matéria-prima de alta qualidade.</p></div>
+          <div class="dif reveal"><span class="dif__num">02</span><h3>Produção Artesanal</h3><p>Tudo feito à mão, com cuidado em cada detalhe.</p></div>
+          <div class="dif reveal"><span class="dif__num">03</span><h3>Atendimento Personalizado</h3><p>Cada projeto é pensado exclusivamente para você.</p></div>
+          <div class="dif reveal"><span class="dif__num">04</span><h3>Entrega com Qualidade</h3><p>Pontualidade e cuidado do forno até a sua mesa.</p></div>
+          <div class="dif reveal"><span class="dif__num">05</span><h3>Produtos Frescos</h3><p>Preparados próximo ao evento, garantindo o sabor.</p></div>
+          <div class="dif reveal"><span class="dif__num">06</span><h3>Apresentação Sofisticada</h3><p>Beleza e requinte em cada item servido.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================= -->
+    <!--  6. DEPOIMENTOS                                           -->
+    <!--  Exemplos fictícios. Substitua pelos depoimentos reais.    -->
+    <!-- ========================================================= -->
+    <section class="depoimentos" id="depoimentos">
+      <div class="container">
+        <div class="galeria__head reveal">
+          <span class="eyebrow">Quem prova, recomenda</span>
+          <h2 class="section-title">Depoimentos</h2>
+        </div>
+
+        <div class="dep-grid">
+          <figure class="dep reveal">
+            <div class="dep__stars" aria-label="5 estrelas">★★★★★</div>
+            <blockquote>"O bolo do casamento foi simplesmente perfeito. Lindo, delicado e delicioso. Todos os convidados elogiaram!"</blockquote>
+            <figcaption>— Mariana &amp; Rafael</figcaption>
+          </figure>
+          <figure class="dep reveal">
+            <div class="dep__stars" aria-label="5 estrelas">★★★★★</div>
+            <blockquote>"Contratamos o coffee break para um treinamento e foi um sucesso. Apresentação impecável e sabor incrível."</blockquote>
+            <figcaption>— Equipe Solaris Tech</figcaption>
+          </figure>
+          <figure class="dep reveal">
+            <div class="dep__stars" aria-label="5 estrelas">★★★★★</div>
+            <blockquote>"Os doces gourmet da festa da minha filha foram o destaque da noite. Atendimento atencioso do início ao fim."</blockquote>
+            <figcaption>— Patrícia M.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================= -->
+    <!--  7. CONTATO                                               -->
+    <!-- ========================================================= -->
+    <section class="contato" id="contato">
+      <div class="container contato__inner reveal">
+        <span class="eyebrow eyebrow--light">Vamos conversar</span>
+        <h2 class="section-title section-title--light">Peça seu orçamento</h2>
+        <p class="contato__lead">Conte sobre seu evento e receba uma proposta sob medida, sem compromisso.</p>
+
+        <a class="whats-big" href="https://wa.me/5551999550311?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento."
+           target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
+          <span class="whats-big__pulse"></span>
+          <svg viewBox="0 0 24 24" class="ico" aria-hidden="true"><path fill="currentColor" d="M12.04 2c-5.46 0-9.9 4.44-9.9 9.9 0 1.75.46 3.45 1.32 4.95L2 22l5.3-1.38a9.86 9.86 0 0 0 4.73 1.2h.01c5.46 0 9.9-4.44 9.9-9.9 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2m4.55 13.45c-.25-.13-1.47-.72-1.7-.8-.23-.09-.4-.13-.56.12-.17.25-.64.8-.79.97-.14.16-.29.18-.54.06-.25-.13-1.05-.39-2-1.23-.74-.66-1.24-1.47-1.39-1.72-.14-.25-.01-.38.11-.51.11-.11.25-.29.37-.43.13-.15.17-.25.25-.42.08-.16.04-.31-.02-.43-.06-.13-.56-1.35-.77-1.84-.2-.48-.41-.42-.56-.42l-.48-.01c-.16 0-.43.06-.66.31-.23.25-.86.85-.86 2.07 0 1.22.89 2.4 1.01 2.56.13.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.47-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.14-1.18-.06-.1-.22-.16-.47-.28"/></svg>
+          <span class="whats-big__txt">
+            <strong>Falar no WhatsApp</strong>
+            <small>(51) 99955-0311</small>
+          </span>
+        </a>
+
+        <ul class="contato__list">
+          <li>
+            <svg viewBox="0 0 24 24" class="ico-sm" aria-hidden="true"><path fill="currentColor" d="M6.6 10.8a15.5 15.5 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.4 0 .8-.3 1z"/></svg>
+            <a href="tel:+5551999550311">(51) 99955-0311</a>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" class="ico-sm" aria-hidden="true"><path fill="currentColor" d="M4 4h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2m0 2v.5l8 5 8-5V6H4m16 12V8.9l-8 5-8-5V18z"/></svg>
+            <a href="mailto:aclaudiamsf@gmail.com">aclaudiamsf@gmail.com</a>
+          </li>
+        </ul>
+
+        <!-- Redes sociais -->
+        <div class="contato__social">
+          <a href="https://wa.me/5551999550311" target="_blank" rel="noopener" aria-label="WhatsApp" class="social social--wa">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12.04 2c-5.46 0-9.9 4.44-9.9 9.9 0 1.75.46 3.45 1.32 4.95L2 22l5.3-1.38a9.86 9.86 0 0 0 4.73 1.2c5.46 0 9.9-4.44 9.9-9.9S17.5 2 12.04 2m4.55 13.45c-.25-.13-1.47-.72-1.7-.8-.23-.09-.4-.13-.56.12-.17.25-.64.8-.79.97-.14.16-.29.18-.54.06-.25-.13-1.05-.39-2-1.23-.74-.66-1.24-1.47-1.39-1.72-.14-.25-.01-.38.11-.51.11-.11.25-.29.37-.43.13-.15.17-.25.25-.42.08-.16.04-.31-.02-.43-.06-.13-.56-1.35-.77-1.84-.2-.48-.41-.42-.56-.42l-.48-.01c-.16 0-.43.06-.66.31-.23.25-.86.85-.86 2.07 0 1.22.89 2.4 1.01 2.56.13.17 1.75 2.67 4.23 3.74 1.55.67 2.16.73 2.94.61.47-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.14-1.18-.06-.1-.22-.16-.47-.28"/></svg>
+          </a>
+          <a href="https://instagram.com/" target="_blank" rel="noopener" aria-label="Instagram" class="social social--ig">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2.2c3.2 0 3.6 0 4.9.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.86s0 3.6-.07 4.86c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.86.07s-3.6 0-4.86-.07c-1.17-.05-1.8-.25-2.23-.41a3.7 3.7 0 0 1-1.38-.9 3.7 3.7 0 0 1-.9-1.38c-.16-.42-.36-1.06-.41-2.23C2.2 15.6 2.2 15.2 2.2 12s0-3.6.07-4.86c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.4 2.2 8.8 2.2 12 2.2m0 1.8c-3.15 0-3.5 0-4.74.07-.9.04-1.38.19-1.7.32-.43.16-.74.36-1.06.68-.32.32-.52.63-.68 1.06-.13.32-.28.8-.32 1.7C3.43 8.5 3.43 8.85 3.43 12s0 3.5.07 4.74c.04.9.19 1.38.32 1.7.16.43.36.74.68 1.06.32.32.63.52 1.06.68.32.13.8.28 1.7.32 1.24.07 1.59.07 4.74.07s3.5 0 4.74-.07c.9-.04 1.38-.19 1.7-.32.43-.16.74-.36 1.06-.68.32-.32.52-.63.68-1.06.13-.32.28-.8.32-1.7.07-1.24.07-1.59.07-4.74s0-3.5-.07-4.74c-.04-.9-.19-1.38-.32-1.7a2.85 2.85 0 0 0-.68-1.06 2.85 2.85 0 0 0-1.06-.68c-.32-.13-.8-.28-1.7-.32C15.5 4 15.15 4 12 4m0 3.06A4.94 4.94 0 1 0 12 17a4.94 4.94 0 0 0 0-9.88m0 8.14A3.2 3.2 0 1 1 12 8.8a3.2 3.2 0 0 1 0 6.4m5.27-8.34a1.15 1.15 0 1 1-2.3 0 1.15 1.15 0 0 1 2.3 0"/></svg>
+          </a>
+          <a href="mailto:aclaudiamsf@gmail.com" aria-label="E-mail" class="social social--mail">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M4 4h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2m0 2v.5l8 5 8-5V6H4m16 12V8.9l-8 5-8-5V18z"/></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================= -->
+    <!--  8. INSTAGRAM                                             -->
+    <!-- ========================================================= -->
+    <section class="instagram" id="instagram">
+      <div class="container">
+        <div class="galeria__head reveal">
+          <span class="eyebrow">Acompanhe o dia a dia</span>
+          <h2 class="section-title">Nosso Instagram</h2>
+          <!-- CONFIGURE AQUI o usuário e o link do Instagram:
+               1) troque @instagram_da_empresa pelo @ real
+               2) troque o href do botão abaixo pelo link do perfil -->
+          <p class="section-sub" id="igHandle">@instagram_da_empresa</p>
+        </div>
+
+        <!-- Mini-feed estilo Instagram (usa as fotos da galeria) -->
+        <div class="ig-feed" id="igFeed"><!-- preenchido via JS --></div>
+
+        <div class="ig-cta reveal">
+          <a class="btn btn--solid" href="https://instagram.com/" target="_blank" rel="noopener" id="igButton">
+            <svg viewBox="0 0 24 24" class="ico" aria-hidden="true"><path fill="currentColor" d="M12 2.2c3.2 0 3.6 0 4.9.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.86s0 3.6-.07 4.86c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.86.07s-3.6 0-4.86-.07c-1.17-.05-1.8-.25-2.23-.41a3.7 3.7 0 0 1-1.38-.9 3.7 3.7 0 0 1-.9-1.38c-.16-.42-.36-1.06-.41-2.23C2.2 15.6 2.2 15.2 2.2 12s0-3.6.07-4.86c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.4 2.2 8.8 2.2 12 2.2m0 4.86A4.94 4.94 0 1 0 12 17a4.94 4.94 0 0 0 0-9.94m0 8.14A3.2 3.2 0 1 1 12 8.8a3.2 3.2 0 0 1 0 6.4m5.27-8.34a1.15 1.15 0 1 1-2.3 0 1.15 1.15 0 0 1 2.3 0"/></svg>
+            Seguir no Instagram
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================================================= -->
+  <!--  RODAPÉ                                                       -->
+  <!-- ============================================================= -->
+  <footer class="rodape">
+    <div class="container rodape__inner">
+      <p class="rodape__brand">Ana Claudia <em>Gourmet</em></p>
+      <p class="rodape__slogan">Qualidade e Requinte à Sua Mesa</p>
+      <p class="rodape__copy">© <span id="ano"></span> Ana Claudia Gourmet · Porto Alegre/RS · Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <!-- Botão flutuante de WhatsApp (sempre visível) -->
+  <a class="float-whats" href="https://wa.me/5551999550311?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento."
+     target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12.04 2c-5.46 0-9.9 4.44-9.9 9.9 0 1.75.46 3.45 1.32 4.95L2 22l5.3-1.38a9.86 9.86 0 0 0 4.73 1.2c5.46 0 9.9-4.44 9.9-9.9S17.5 2 12.04 2m4.55 13.45c-.25-.13-1.47-.72-1.7-.8-.23-.09-.4-.13-.56.12-.17.25-.64.8-.79.97-.14.16-.29.18-.54.06-.25-.13-1.05-.39-2-1.23-.74-.66-1.24-1.47-1.39-1.72-.14-.25-.01-.38.11-.51.11-.11.25-.29.37-.43.13-.15.17-.25.25-.42.08-.16.04-.31-.02-.43-.06-.13-.56-1.35-.77-1.84-.2-.48-.41-.42-.56-.42l-.48-.01c-.16 0-.43.06-.66.31-.23.25-.86.85-.86 2.07 0 1.22.89 2.4 1.01 2.56.13.17 1.75 2.67 4.23 3.74 1.55.67 2.16.73 2.94.61.47-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.14-1.18-.06-.1-.22-.16-.47-.28"/></svg>
+  </a>
+
+  <script src="script.js"></script>
+</body>
+</html>
