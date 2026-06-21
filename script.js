@@ -55,11 +55,12 @@
   if (toggle && menu) {
     toggle.addEventListener("click", function () {
       var aberto = menu.classList.toggle("is-open");
+      document.documentElement.classList.toggle("no-scroll", aberto);
       toggle.classList.toggle("is-open", aberto);
       toggle.setAttribute("aria-expanded", String(aberto));
     });
     $$(".nav__menu a").forEach(function (a) {
-      a.addEventListener("click", function () { menu.classList.remove("is-open"); toggle.classList.remove("is-open"); });
+      a.addEventListener("click", function () { menu.classList.remove("is-open"); toggle.classList.remove("is-open"); document.documentElement.classList.remove("no-scroll"); });
     });
   }
 
@@ -158,9 +159,9 @@
   var lb = $("#lightbox"), lbImg = $("#lightboxImg"), lbIdx = 0;
   function abrirLightbox(i) {
     if (!lb) return; lbIdx = i; lbImg.src = fotos[i]; lbImg.alt = "Foto " + (i + 1);
-    lb.classList.add("is-open"); lb.setAttribute("aria-hidden", "false");
+    lb.classList.add("is-open"); lb.setAttribute("aria-hidden", "false"); document.documentElement.classList.add("no-scroll");
   }
-  function fecharLightbox() { if (lb) { lb.classList.remove("is-open"); lb.setAttribute("aria-hidden", "true"); } }
+  function fecharLightbox() { if (lb) { lb.classList.remove("is-open"); lb.setAttribute("aria-hidden", "true"); document.documentElement.classList.remove("no-scroll"); } }
   function navLightbox(d) { lbIdx = (lbIdx + d + fotos.length) % fotos.length; lbImg.src = fotos[lbIdx]; lbImg.alt = "Foto " + (lbIdx + 1); }
   if (lb) {
     $(".lightbox__close", lb).addEventListener("click", fecharLightbox);
@@ -285,7 +286,10 @@
   }
   function initCanvas() {
     if (REDUZ) return;
-    canvas = document.createElement("canvas"); canvas.id = "granulado"; document.body.appendChild(canvas);
+    canvas = document.createElement("canvas"); canvas.id = "granulado";
+    canvas.style.pointerEvents = "none";          // nunca captura mouse/roda
+    canvas.setAttribute("aria-hidden", "true");
+    document.body.appendChild(canvas);
     ctx = canvas.getContext("2d"); redimensionar();
     for (var i = 0; i < MAXP; i++) parts.push(novaParticula(false));
     requestAnimationFrame(loopCanvas);
