@@ -2,6 +2,15 @@
 
 Site de página única (one-page), responsivo, sem backend e pronto para o **GitHub Pages**.
 
+## Novidades desta versão (premium)
+
+- Abertura cinematográfica + barra de progresso de leitura.
+- **Velas que acendem** conforme você rola a seção "Celebrar".
+- **Granulado caindo** suavemente (mais intenso ao rolar rápido).
+- **Cards 3D** que reagem ao mouse, botões magnéticos e luz que segue o cursor.
+- Galeria com **lightbox** (tela cheia, setas e teclado), depoimentos em carrossel automático, contadores animados e brilho nos elementos ao entrarem na tela.
+- Todos os efeitos respeitam "reduzir movimento" do sistema e são otimizados para celular (menos partículas, sem tilt no toque) para manter a performance.
+
 ## Arquivos
 
 ```
