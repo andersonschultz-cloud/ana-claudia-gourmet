@@ -21,8 +21,8 @@
   var PREFIXO     = "foto";             // foto1.jpg, foto2.jpg, ...
   var EXTENSAO    = ".jpg";
 
-  var INSTAGRAM_USER = "@instagram_da_empresa";        // ← troque pelo @ real
-  var INSTAGRAM_URL  = "https://instagram.com/";       // ← troque pelo link real
+  var INSTAGRAM_USER = "@aclaudiagourmet";        // ← troque pelo @ real
+  var INSTAGRAM_URL  = "https://www.instagram.com/aclaudiagourmet";       // ← troque pelo link real
 
   /* Atalhos */
   var $  = function (s, c) { return (c || document).querySelector(s); };
