@@ -15,8 +15,8 @@
   var PASTA_FOTOS    = "images/";
   var PREFIXO        = "foto";
   var EXTENSAO       = ".jpg";
-  var INSTAGRAM_USER = "@instagram_da_empresa";
-  var INSTAGRAM_URL  = "https://instagram.com/";
+  var INSTAGRAM_USER = "@aclaudiagourmet";
+  var INSTAGRAM_URL  = "https://www.instagram.com/aclaudiagourmet?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==";
 
   /* atalhos + flags */
   var $  = function (s, c) { return (c || document).querySelector(s); };
